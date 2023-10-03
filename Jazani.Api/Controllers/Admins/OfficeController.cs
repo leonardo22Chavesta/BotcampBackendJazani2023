@@ -31,8 +31,22 @@ namespace Jazani.Api.Controllers.Admins
         }
 
         [HttpPost]
-        public void Post([FromBody] Office entity) { }
+        public async Task<OfficeDto> Post([FromBody] OfficeSaveDto officeSaveDto) 
+        {
+            return await _officeService.CrearAsync(officeSaveDto);
+        }
 
+        [HttpPut]
+        public async Task<OfficeDto> Put(int id, [FromBody] OfficeSaveDto officeSaveDto) 
+        {
+            return await _officeService.EditAsync(id, officeSaveDto);
+        }
+        
+        [HttpDelete]
+        public async Task<OfficeDto> Delete(int id) 
+        {
+            return await _officeService.DisableAsync(id);
+        }
 
 
     }

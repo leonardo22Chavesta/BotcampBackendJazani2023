@@ -24,5 +24,20 @@ namespace Jazani.Infrastructure.Admins.Persistences
         {
             return await _context.Offices.FirstOrDefaultAsync(o => o.Id == id);
         }
+
+        public async Task<Office> SaveAsync(Office office)
+        {
+
+            EntityState state =  _context.Entry(office).State;
+
+            _ = state switch
+            {
+                EntityState.Detached => _context.Offices.Add(office),
+                EntityState.Modified => _context.Offices.Update(office),
+            };
+            await _context.SaveChangesAsync();
+
+            return office;
+        }
     }
 }
