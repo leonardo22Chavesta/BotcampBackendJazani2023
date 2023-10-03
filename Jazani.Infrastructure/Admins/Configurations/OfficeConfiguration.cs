@@ -19,6 +19,8 @@ namespace Jazani.Infrastructure.Admins.Configurations
             builder.Property(x => x.Description).HasColumnName("description");
             builder.Property(x => x.RegistrationDate).HasColumnName("registrationdate");
             builder.Property(x => x.State).HasColumnName("state");
+
+            
         }
     }
 }

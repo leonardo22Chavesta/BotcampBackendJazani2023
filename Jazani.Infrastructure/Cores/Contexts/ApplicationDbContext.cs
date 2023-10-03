@@ -1,7 +1,6 @@
 ﻿using Jazani.Domain.Admins.Models;
 using Jazani.Infrastructure.Admins.Configurations;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Jazani.Infrastructure.Cores.Contexts
 {
@@ -11,6 +10,7 @@ namespace Jazani.Infrastructure.Cores.Contexts
 
         #region DbSet
         public DbSet<Office> Offices { get; set; }
+        public DbSet<Requirement> Requirements { get; set; }
 
         #endregion
 
@@ -18,6 +18,7 @@ namespace Jazani.Infrastructure.Cores.Contexts
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new OfficeConfiguration());
+            modelBuilder.ApplyConfiguration(new RequirementConfiguration());
         }
 
 

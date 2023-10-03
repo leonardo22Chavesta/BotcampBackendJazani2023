@@ -3,7 +3,6 @@ using Jazani.Infrastructure.Admins.Persistences;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 
 namespace Jazani.Infrastructure.Cores.Contexts
 {
@@ -18,6 +17,7 @@ namespace Jazani.Infrastructure.Cores.Contexts
 
 
             service.AddTransient<IOfficeRepository, OfficeRespository>();
+            service.AddTransient<IRequirementRepository, RequirementRepository>();
 
             return service;
         } 
