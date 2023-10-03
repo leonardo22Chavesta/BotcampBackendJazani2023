@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jazani.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c3d0b0673479f1f20c0337fa2fcf2a98dead60f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jazani.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jazani.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
