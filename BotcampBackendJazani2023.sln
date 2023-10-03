@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34112.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jazani.Api", "Jazani.Api\Jazani.Api.csproj", "{BE9346FE-7E72-4AE9-B372-DC3F278C630D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE9346FE-7E72-4AE9-B372-DC3F278C630D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9346FE-7E72-4AE9-B372-DC3F278C630D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9346FE-7E72-4AE9-B372-DC3F278C630D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9346FE-7E72-4AE9-B372-DC3F278C630D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A312A8B-D3C9-46A2-9195-FE3E304AE9CC}
+	EndGlobalSection
+EndGlobal
