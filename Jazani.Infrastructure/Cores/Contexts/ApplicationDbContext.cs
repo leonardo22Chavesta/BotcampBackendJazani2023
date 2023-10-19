@@ -1,24 +1,25 @@
 ﻿using Jazani.Domain.Admins.Models;
+using Jazani.Domain.Generals.Models;
 using Jazani.Infrastructure.Admins.Configurations;
+using Jazani.Infrastructure.Generals.Configurations;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Jazani.Infrastructure.Cores.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
+        { }
 
-        #region DbSet
-        public DbSet<Office> Offices { get; set; }
-        public DbSet<Requirement> Requirements { get; set; }
 
-        #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration(new OfficeConfiguration());
-            modelBuilder.ApplyConfiguration(new RequirementConfiguration());
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
         }
 
 

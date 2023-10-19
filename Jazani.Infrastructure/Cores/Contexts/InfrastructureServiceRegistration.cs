@@ -1,6 +1,4 @@
-﻿using Jazani.Domain.Admins.Repositories;
-using Jazani.Infrastructure.Admins.Persistences;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,8 +14,7 @@ namespace Jazani.Infrastructure.Cores.Contexts
             });
 
 
-            service.AddTransient<IOfficeRepository, OfficeRespository>();
-            service.AddTransient<IRequirementRepository, RequirementRepository>();
+          
 
             return service;
         } 
